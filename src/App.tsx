@@ -62,6 +62,8 @@ function getOrCreateSessionId(): string {
   return sid;
 }
 
+const SOCKET_URL = import.meta.env.VITE_SOCKET_URL || 'https://ludo-game-app-production.up.railway.app';
+
 export default function App() {
   const [gameState, setGameState] = useState<GameState | null>(null);
   const [theme, setTheme] = useState<BoardTheme>(() => {
@@ -196,12 +198,13 @@ export default function App() {
 
   // Initialize Socket connection with auto-reconnection
   useEffect(() => {
-    const socket = io({
+    const socket = io(SOCKET_URL, {
       reconnection: true,
       reconnectionAttempts: Infinity,
       reconnectionDelay: 1000,
       reconnectionDelayMax: 5000,
-      transports: ['websocket', 'polling']
+      transports: ['polling', 'websocket'],
+      upgrade: true
     });
     socketRef.current = socket;
 
