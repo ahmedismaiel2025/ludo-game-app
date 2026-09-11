@@ -1,18 +1,23 @@
 {
-  "name": "Lido Stars - لعبة ليدو أونلاين",
   "short_name": "Lido Stars",
-  "description": "لعبة ليدو الكلاسيكية متعددة اللاعبين أونلاين ومحلياً",
-  "start_url": "/",
-  "display": "standalone",
-  "background_color": "#020617",
-  "theme_color": "#020617",
-  "orientation": "portrait",
+  "name": "Lido Stars - لودو الأصدقاء",
   "icons": [
     {
-      "src": "/assets/ludo_cover_art.png",
-      "sizes": "512x512",
+      "src": "https://cdn-icons-png.flaticon.com/512/5968/5968841.png",
       "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/5968/5968841.png",
+      "type": "image/png",
+      "sizes": "512x512",
       "purpose": "any maskable"
     }
-  ]
+  ],
+  "start_url": "/",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
+  "display": "standalone",
+  "orientation": "portrait"
 }
