@@ -28,10 +28,10 @@ export const SeatedPlayer: React.FC<SeatedPlayerProps> = ({
   // Left: at the left edge of table
   // Right: at the right edge of table
   const positionClasses = {
-    top: '-top-14 sm:-top-16 left-1/2 -translate-x-1/2',
-    bottom: '-bottom-14 sm:-bottom-16 left-1/2 -translate-x-1/2',
-    left: 'top-1/2 -left-14 sm:-left-16 -translate-y-1/2',
-    right: 'top-1/2 -right-14 sm:-right-16 -translate-y-1/2'
+    top: '-top-10 sm:-top-12 left-1/2 -translate-x-1/2',
+    bottom: '-bottom-10 sm:-bottom-12 left-1/2 -translate-x-1/2',
+    left: 'top-1/2 -left-10 sm:-left-12 -translate-y-1/2',
+    right: 'top-1/2 -right-10 sm:-right-12 -translate-y-1/2'
   }[position];
 
   return (
@@ -52,13 +52,13 @@ export const SeatedPlayer: React.FC<SeatedPlayerProps> = ({
     >
       {/* 3D Player Chair Silhouette */}
       <div
-        className={`relative flex flex-col items-center p-1.5 sm:p-2 rounded-2xl bg-slate-900/90 border-2 ${
-          isActiveTurn ? `${cfg.border} ring-4 ${cfg.ring} shadow-lg shadow-${player.color}-900/50` : 'border-slate-700/80 shadow-md'
+        className={`relative flex flex-col items-center p-1 sm:p-1.5 rounded-xl bg-slate-900/95 border-2 ${
+          isActiveTurn ? `${cfg.border} ring-2 ${cfg.ring} shadow-lg shadow-${player.color}-900/50` : 'border-slate-700/80 shadow-md'
         } backdrop-blur-md`}
       >
         {/* Active turn indicator crown / arrow */}
         {isActiveTurn && (
-          <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-40 bg-amber-400 text-slate-950 px-1.5 py-0.5 rounded-full text-[9px] font-black flex items-center gap-0.5 shadow-md animate-bounce">
+          <div className="absolute -top-3 left-1/2 -translate-x-1/2 z-40 bg-amber-400 text-slate-950 px-1.5 py-0.2 rounded-full text-[8px] font-black flex items-center gap-0.5 shadow-md animate-bounce">
             <Crown className="w-2.5 h-2.5 fill-slate-950" />
             <span>دوره</span>
           </div>
@@ -68,23 +68,23 @@ export const SeatedPlayer: React.FC<SeatedPlayerProps> = ({
         <div className="relative">
           <AvatarDisplay
             avatarId={player.avatar}
-            size={isWideView ? 'sm' : 'md'}
+            size={isWideView ? 'xs' : 'sm'}
             withGlow={isActiveTurn}
           />
           {/* Color marker tag */}
           <div
-            className={`absolute -bottom-1 -right-1 w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full ${cfg.bg} border-2 border-slate-950 flex items-center justify-center shadow`}
+            className={`absolute -bottom-1 -right-1 w-3 h-3 sm:w-3.5 sm:h-3.5 rounded-full ${cfg.bg} border-2 border-slate-950 flex items-center justify-center shadow`}
           >
             {player.isAI && <Bot className="w-2 h-2 text-white" />}
           </div>
         </div>
 
         {/* Player Name and status label */}
-        <div className="mt-1 flex flex-col items-center">
-          <span className={`text-[10px] sm:text-xs font-black ${cfg.text} max-w-[70px] sm:max-w-[95px] truncate text-center leading-tight`}>
+        <div className="mt-0.5 flex flex-col items-center">
+          <span className={`text-[9px] sm:text-[10px] font-black ${cfg.text} max-w-[65px] sm:max-w-[85px] truncate text-center leading-tight`}>
             {player.name}
           </span>
-          <span className="text-[8px] text-slate-400 font-bold">
+          <span className="text-[7.5px] text-slate-400 font-bold">
             {player.isAI ? 'روبوت' : 'لاعب'}
           </span>
         </div>

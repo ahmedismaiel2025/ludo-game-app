@@ -875,7 +875,7 @@ export default function App() {
           {/* Center Ludo Board & Side/Bottom Dice */}
           <div className="flex-1 flex flex-col md:flex-row items-center justify-center gap-3 sm:gap-4 my-auto">
             <div className="w-full flex justify-center">
-              <div className="relative p-6 sm:p-8">
+              <div className="relative p-5 sm:p-7 mb-10 sm:mb-12 md:mb-0">
                 {/* Seated players around the 3D board during gameplay */}
                 <TableSeatedPlayers
                   players={gameState.players}
@@ -899,7 +899,7 @@ export default function App() {
             </div>
 
             {/* Interactive Dice Widget */}
-            <div className="flex flex-col items-center justify-center p-3 rounded-2xl bg-slate-900/70 border border-slate-800/80 shadow-xl shrink-0 min-w-[130px]">
+            <div className="relative z-30 flex flex-col items-center justify-center p-3 rounded-2xl bg-slate-900/90 border border-slate-800/90 shadow-2xl shrink-0 min-w-[140px]">
               <Dice
                 value={gameState.diceValue}
                 isRolling={gameState.isRolling}
