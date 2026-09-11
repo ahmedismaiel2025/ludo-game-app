@@ -1,0 +1,6 @@
+{
+  "name": "ليدو الأصدقاء",
+  "description": "لعبة ليدو الأصدقاء الكلاسيكية متعددة اللاعبين أونلاين ومحلياً - تصميم أحمد إسماعيل. العب مع أصدقائك عبر مشاركة رمز الغرفة أو ضد الكمبيوتر مع كامل القواعد والمؤثرات.",
+  "requestFramePermissions": ["microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
